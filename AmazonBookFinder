@@ -1,0 +1,31 @@
+javascript:
+
+var ebookcheck = document.getElementById(%22ebooksProductTitle%22);
+
+var bookcheck = document.getElementById(%22productTitle%22);
+
+if(ebookcheck !=null){ 
+
+var book= document.getElementById(%22ebooksProductTitle%22).innerText;
+
+(open(%22https://archive.org/search.php?query=%22+book));
+
+}else if(bookcheck !=null){
+
+var book= document.getElementById(%22productTitle%22).innerText;
+
+(open(%22https://archive.org/search.php?query=%22+book));
+
+} else {
+
+var book=window.prompt(%22Find Free Books:%22, %22Enter the book title%22); 
+
+if(book == "Enter the book title" || book == null){
+
+alert("Enter a book title or find one on Amazon");
+
+} else {
+
+(open(%22https://archive.org/search.php?query=%22+book));
+
+}}
